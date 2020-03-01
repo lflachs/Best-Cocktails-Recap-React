@@ -1,17 +1,20 @@
 import React from "react";
-import "./Card.scss";
 import PropTypes from "prop-types";
+
+import "./Card.scss";
+
+import PropertyBloc from "./PropertyBloc";
 
 function Card({ cardTitle, cardImage }) {
   const styles = {
     card: {
-      backgroundImage: `url("${cardImage}")`
+      backgroundImage: `linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%), url("${cardImage}")`
     }
   };
   return (
     <div className="card" style={styles.card}>
       <h1 className="card-title">{cardTitle}</h1>
-      {/* <PropertiesBloc /> */}
+      <PropertyBloc properties={["Yoghurt", "Water"]} />
     </div>
   );
 }

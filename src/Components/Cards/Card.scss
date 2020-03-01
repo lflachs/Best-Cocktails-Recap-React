@@ -1,8 +1,15 @@
 .card {
   display: flex;
-  height: 371px;
-  width: 303px;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 303px;
+  width: 371px;
   border-radius: 20px;
   background-size: cover;
+  background-position: center;
   color: white;
+  padding: 20px;
+  .card-title {
+    margin: 0;
+  }
 }
