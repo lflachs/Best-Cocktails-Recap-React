@@ -1,5 +1,6 @@
 import React from "react";
 import "./Card.scss";
+import PropTypes from "prop-types";
 
 function Card({ cardTitle, cardImage }) {
   const styles = {
@@ -14,4 +15,8 @@ function Card({ cardTitle, cardImage }) {
     </div>
   );
 }
+Card.propTypes = {
+  cardTitle: PropTypes.string.isRequired,
+  cardImage: PropTypes.string.isRequired
+};
 export default Card;
