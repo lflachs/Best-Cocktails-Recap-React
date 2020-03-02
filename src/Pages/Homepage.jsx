@@ -1,13 +1,17 @@
 import React from "react";
 import Card from "../Components/Cards/Card";
+import CardContainer from "../Components/Cards/CardContainer";
 
 function Homepage() {
   return (
-    <Card
-      cardTitle={"Lassi Khara"}
-      cardImage={
-        "https://www.thecocktaildb.com/images/media/drink/m1suzm1487603970.jpg"
-      }
+    <CardContainer
+      cardList={[
+        {
+          title: "Lassi",
+          image:
+            "https://www.thecocktaildb.com/images/media/drink/m1suzm1487603970.jpg"
+        }
+      ]}
     />
   );
 }
