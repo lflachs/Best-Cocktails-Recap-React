@@ -1,13 +1,19 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .card {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 303px;
-  width: 371px;
+  width: 90%;
   border-radius: 20px;
   background-size: cover;
   background-position: center;
   color: white;
+  margin-bottom: 2em;
   padding: 20px;
   .card-title {
     margin: 0;

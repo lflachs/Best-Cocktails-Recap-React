@@ -5,7 +5,7 @@ import "./Card.scss";
 
 import PropertyBloc from "./PropertyBloc";
 
-function Card({ cardTitle, cardImage, category, id }) {
+function Card({ cardTitle, cardImage, category }) {
   const styles = {
     card: {
       backgroundImage: `linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%), url("${cardImage}")`

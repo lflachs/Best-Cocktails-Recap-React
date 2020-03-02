@@ -3,16 +3,16 @@ import Card from "./Card";
 
 function CardContainer({ cardList }) {
   return (
-    <React.Fragment>
+    <div className="card-container">
       {cardList.map(card => (
         <Card
-          key={card.id}
-          cardTitle={card.title}
-          cardImage={card.image}
-          category={card.category}
+          key={card.idDrink}
+          cardTitle={card.strDrink}
+          cardImage={card.strDrinkThumb}
+          category={[card.strIngredient1, card.strIngredient2]}
         />
       ))}
-    </React.Fragment>
+    </div>
   );
 }
 
