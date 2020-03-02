@@ -10,8 +10,8 @@ function PropertyBloc({ properties }) {
     <React.Fragment>
       <h5 className="property-bloc-title">Main ingredients:</h5>
       <div className="property-bloc">
-        {properties.map(property => (
-          <PropertyButton title={property} />
+        {properties.map((property, idx) => (
+          <PropertyButton key={idx} title={property} />
         ))}
       </div>
     </React.Fragment>

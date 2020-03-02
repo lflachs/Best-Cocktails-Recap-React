@@ -5,7 +5,12 @@ function CardContainer({ cardList }) {
   return (
     <React.Fragment>
       {cardList.map(card => (
-        <Card id={card.name} cardTitle={card.title} cardImage={card.image} />
+        <Card
+          key={card.id}
+          cardTitle={card.title}
+          cardImage={card.image}
+          category={card.category}
+        />
       ))}
     </React.Fragment>
   );
