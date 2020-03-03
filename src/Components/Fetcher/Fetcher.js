@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import useFetcher from "./FetcherComponent";
 
 const Fetcher = ({ children }) => {
   const [data, setData] = useState("");
