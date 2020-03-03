@@ -1,20 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../Components/Cards/Card";
 import CardContainer from "../Components/Cards/CardContainer";
 import useFetch from "../Components/Fetcher/FetcherComponent";
+import Fetcher from "../Components/Fetcher/Fetcher";
+import api from "../Components/Fetcher/Api";
 
 function Homepage() {
-  const res = useFetch(
-    "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita",
-    {}
+  return (
+    <div>
+      <Fetcher>
+        {(data, setQuery) => {
+          return <CardContainer cardList={data.drinks} setQuery={setQuery} />;
+        }}
+      </Fetcher>
+    </div>
   );
-  if (!res.response) {
-    return <div>Loading...</div>;
-  } else {
-    const cocktail = res.response.drinks;
-
-    return <CardContainer cardList={cocktail} />;
-  }
 }
 
 export default Homepage;

@@ -1,11 +1,13 @@
 import React from "react";
 import Card from "./Card";
 
-function CardContainer({ cardList }) {
+function CardContainer({ cardList, setQuery }) {
+  console.log("cardList", typeof cardList);
   return (
     <div className="card-container">
       {cardList.map(card => (
         <Card
+          setQuery={setQuery}
           key={card.idDrink}
           cardTitle={card.strDrink}
           cardImage={card.strDrinkThumb}
